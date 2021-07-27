@@ -1,0 +1,304 @@
+.page-wrapper
+  display: flex
+  flex-direction: column
+  overflow: hidden
+  .banner
+    background: url('/assets/images/DSC_0695-WB.jpg')
+    background-repeat: no-repeat
+    background-size: cover
+    width: 100%
+    padding: 10em 0 19.75em 0
+    .inner
+      padding: 2em
+    .row
+      display: flex
+      align-items: center
+      margin-bottom: 0.8em
+      padding-bottom: 0.4em
+      border-bottom: solid 2px rgba(255, 255, 255, 0.125)
+      .logo
+        $image-size: 5em
+        background: url('/assets/images/logo-white-line-circle.png')
+        background-repeat: no-repeat
+        background-size: cover
+        width: $image-size
+        height: $image-size
+      h2
+        color: var(--white)
+        font-size: 2.25em
+        margin: 0
+
+  .wrapper
+    $diagonalHeight: 3.5em
+    position: relative
+    margin-bottom: $diagonalHeight
+    &:last-child
+      margin-bottom: 0
+      padding: 2.5em
+    .inner
+      display: flex
+      align-items: center
+      justify-content: space-between
+      .image
+        $image-size: 10em
+        border-radius: 100%
+        flex-shrink: 0
+        width: $image-size
+        height: $image-size
+        overflow: hidden
+
+    &.section-up
+      background-color: var(--yellow)
+      .image
+        margin-left: 3em
+      &::before
+        content: ' '
+        height: $diagonalHeight
+        position: absolute
+        top: ($diagonalHeight * -2)
+        border-left: 100vw solid transparent
+        border-bottom: $diagonalHeight solid var(--yellow)
+      &::after
+        content: ' '
+        height: $diagonalHeight
+        position: absolute
+        bottom: ($diagonalHeight * -2)
+        border-left: 100vw solid transparent
+        border-top: $diagonalHeight solid var(--yellow)
+    &.section-down
+      background-color: var(--white)
+      .image
+        margin-right: 3em
+      &::before
+        content: ' '
+        height: $diagonalHeight
+        position: absolute
+        top: ($diagonalHeight * -2)
+        border-right: 100vw solid transparent
+        border-bottom: $diagonalHeight solid var(--white)
+      &::after
+        content: ' '
+        height: $diagonalHeight
+        position: absolute
+        bottom: ($diagonalHeight * -2)
+        border-right: 100vw solid transparent
+        border-top: $diagonalHeight solid var(--white)
+    &.section-down, &.section-up
+      &:last-child
+        &::after
+          border: none
+
+    &.ideas
+      .content
+        width: 100%
+        .ideas-container
+          display: flex
+          flex-wrap: wrap
+          .idea
+            flex: 0 0 25%
+            display: flex
+            flex-direction: column
+            align-items: center
+            padding: 1em
+            margin: 1em
+            border-radius: 5px
+            border: solid 2px var(--black)
+            background-color: var(--white)
+            .idea-icon
+              $image-size: 5em
+              background-repeat: no-repeat
+              background-size: cover
+              width: $image-size
+              height: $image-size
+            label
+              font-size: 16.5pt
+              font-weight: 700
+              line-height: 1.65
+            &.education
+              .idea-icon
+                background-image: url('/assets/images/Education.svg')
+    &.how
+      .item
+        display: flex
+        align-items: center
+        margin: 1em 0
+        .highlight
+          font-weight: 500
+        > div:first-child
+          margin-right: 1em
+        .icon
+          $image-size: 4em
+          background-repeat: no-repeat
+          background-size: cover
+          width: $image-size
+          height: $image-size
+          min-width: $image-size
+        .land
+          background-image: url('/assets/images/land.svg')
+        .m2
+          background-image: url('/assets/images/area.svg')
+        .idea
+          background-image: url('/assets/images/idea.svg')
+        .installments
+          background-image: url('/assets/images/installments.svg')
+        &.bar
+          display: flex
+          flex-direction: column
+          align-items: center
+          $barWidth: 80%
+          .percentage-bar
+            $barHeight: 1em
+            border: 4px solid var(--black)
+            border-radius: 5px
+            height: $barHeight
+            width: $barWidth
+            margin: 0
+            box-sizing: content-box
+            .fill
+              width: 33%
+              height: $barHeight
+              background-color: var(--yellow)
+          .values
+            width: $barWidth
+            display: flex
+            justify-content: space-between
+
+    &.form
+      .inner
+        justify-content: center
+        form
+          padding: 1em
+          background-color: var(--white)
+          border-radius: 5px
+          .amounts
+            display: flex
+            justify-content: space-between
+            font-family: "Source Sans Pro", Helvetica, sans-serif
+            font-size: 16.5pt
+            font-weight: 400
+            line-height: 1.65
+            .input-amount
+              display: flex
+              align-items: center
+              padding: 0 1em
+              border: solid 2px var(--yellow)
+              border-radius: 5px
+              input
+                width: 100px
+                padding: 0
+                border: none
+                font-weight: 400
+                &::placeholder
+                  color: rgba(0, 0, 0, 0.5)
+
+            .amount
+              border: solid 2px var(--yellow)
+              border-radius: 5px
+              display: flex
+              align-items: center
+              margin-right: 20px
+              padding: 0 1em
+              &:hover
+                cursor: pointer
+          .field
+            padding-bottom: 1.5em
+        label
+          display: block
+          font-family: Raleway, Helvetica, sans-serif
+          font-size: 0.8em
+          font-weight: 700
+          letter-spacing: 0.1em
+          margin: 0 0 0.7em 0
+          text-transform: uppercase
+        input, select, button
+          height: 2.5em
+          -webkit-appearance: none
+          appearance: none
+          border-radius: 5px
+          border: none
+          border: solid 2px var(--yellow)
+          color: inherit
+          display: block
+          outline: 0
+          padding: 0 1em
+          text-decoration: none
+          width: 100%
+          font-weight: 400
+        select
+          cursor: pointer
+        button
+          font-family: Raleway, Helvetica, sans-serif
+          font-size: 0.8em
+          letter-spacing: 0.1em
+          background-color: var(--yellow)
+          cursor: pointer
+        .button-box
+          padding: 2px
+          background-color: var(--white)
+          border-radius: 5px
+
+.how, .wrapper
+  .image
+    background: url('/assets/images/DSC_0663.jpg')
+    background-repeat: no-repeat
+    background-size: cover
+
+.inner
+  margin: 1em auto
+  width: 55em
+  h2
+    &.center
+      margin: 1em auto
+      text-align: center
+
+@media(max-width: 600px)
+  .inner
+    width: 100%
+  .page-wrapper
+    .banner
+      background-position: center
+    .wrapper
+      .inner
+        width: 100%
+        padding: 0 1.5em 0 1.5em
+        flex-direction: column
+        .image
+          $image-size: 14em
+          margin-bottom: 1em
+          height: $image-size
+          width: $image-size
+        .content
+          .major
+            padding-bottom: 1em
+            border-bottom: 2px solid var(--black)
+      &.section-up
+        .inner
+          .image
+            align-self: flex-end
+      &.section-down
+        .inner
+          .image
+            align-self: flex-start
+      &.spotlight
+        .inner
+          flex-direction: column-reverse
+      &.ideas
+          .content
+            .ideas-container
+              .idea
+                margin: 0 0 1em 0
+                flex: 0 0 100%
+      &.form
+        .inner
+          form
+            .amounts
+              flex-direction: column
+              .amount
+                margin: 0 0 1em 0
+            input, select, button
+              height: inherit
+            .actions
+              .button-box
+                margin-top: 1em
+                font-size: 16.5px
+                height: 2em

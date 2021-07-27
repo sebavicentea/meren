@@ -1,0 +1,42 @@
+@import 'colors'
+@import url(https://fonts.googleapis.com/css?family=Raleway:200,500,700|Source+Sans+Pro:300,400,600,300italic,600italic)
+
+*
+  box-sizing: border-box
+
+body
+  font-family: Raleway
+  font-size: 16.5pt
+  font-weight: 300
+  line-height: 1.65
+  margin: 0
+  max-width: 100vw
+  overflow-x: hidden
+  -webkit-font-feature-settings: "lnum"
+  -moz-font-feature-settings: "lnum"
+  font-feature-settings: "lnum"
+
+
+  h1, h2, h3, h4, h5
+    font-family: Raleway, Helvetica, sans-serif
+    font-weight: 700
+    letter-spacing: 0.1em
+    margin: 0 0 1em 0
+    text-transform: uppercase
+  input, select, textarea
+    font-family: "Source Sans Pro", Helvetica, sans-serif
+    font-size: 16.5pt
+    font-weight: 300
+    line-height: 1.65
+    box-sizing: border-box
+
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button
+    -webkit-appearance: none
+
+  input[type=number]
+    -moz-appearance: textfield
+
+@media(max-width: 600px)
+  body
+    font-size: 12px
