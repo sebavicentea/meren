@@ -1,0 +1,105 @@
+form
+  padding: 1em
+  background-color: var(--white)
+  border-radius: 5px
+  .amounts
+    display: flex
+    justify-content: space-between
+    font-family: "Source Sans Pro", Helvetica, sans-serif
+    font-weight: 400
+    line-height: 1.65
+    .input-amount
+      display: flex
+      align-items: center
+      padding: 0 1em
+      border: solid 2px var(--yellow)
+      border-radius: 5px
+      &.selected
+        background-color: var(--yellow)
+        color: var(--black)
+        .currency
+          color: var(--black)
+        input
+          background-color: var(--yellow)
+      .currency
+        color: rgba(0, 0, 0, 0.5)
+
+      input
+        width: 100px
+        padding: 0
+        border: none
+        font-weight: 400
+        &::placeholder
+          color: rgba(0, 0, 0, 0.5)
+
+    .amount
+      border: solid 2px var(--yellow)
+      border-radius: 5px
+      display: flex
+      align-items: center
+      margin-right: 20px
+      padding: 0 1em
+      &:hover
+        cursor: pointer
+      &.selected
+        background-color: var(--yellow)
+  .field
+    padding-bottom: 1.5em
+
+  label
+    display: block
+    font-family: Raleway, Helvetica, sans-serif
+    font-size: 0.8em
+    font-weight: 700
+    letter-spacing: 0.1em
+    margin: 0 0 0.7em 0
+    text-transform: uppercase
+  input, select, button
+    height: 2.5em
+    -webkit-appearance: none
+    appearance: none
+    border-radius: 5px
+    border: none
+    border: solid 2px var(--yellow)
+    color: inherit
+    display: block
+    outline: 0
+    padding: 0 1em
+    text-decoration: none
+    width: 100%
+    font-weight: 400
+  select
+    cursor: pointer
+  button
+    font-family: Raleway, Helvetica, sans-serif
+    font-size: 0.8em
+    letter-spacing: 0.1em
+    background-color: var(--yellow)
+    cursor: pointer
+    &:disabled
+      cursor: default
+      color: var(--dark-gray)
+      background-color: var(--disabled-yellow)
+      border-color: var(--disabled-yellow)
+
+  .button-box
+    padding: 2px
+    background-color: var(--white)
+    border-radius: 5px
+
+@media(max-width: 600px)
+
+  form
+    .field
+      padding-bottom: 1em
+    .amounts
+      flex-direction: column
+      .amount
+        margin: 0 0 1em 0
+    input, select, button
+      height: inherit
+    .actions
+      .button-box
+        margin-top: 1em
+        font-size: 16.5px
+        height: 2em
