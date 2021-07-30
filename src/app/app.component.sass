@@ -151,6 +151,8 @@
           width: $image-size
           height: $image-size
           min-width: $image-size
+        .surprise
+          background-image: url('/assets/images/surprise.svg')
         .land
           background-image: url('/assets/images/land.svg')
         .m2
@@ -185,6 +187,22 @@
       .inner
         justify-content: center
 
+    &.socials
+      .social-icons
+        display: flex
+        justify-content: center
+
+        .social-icon
+          $image-size: 5em
+          background-repeat: no-repeat
+          background-size: cover
+          width: $image-size
+          height: $image-size
+          &.facebook
+            background-image: url('/assets/images/facebook.svg')
+          &.instagram
+            background-image: url('/assets/images/instagram.svg')
+            margin-right: 2em
 
 .wrapper
   .image
@@ -206,6 +224,9 @@
     &.center
       margin: 1em auto
       text-align: center
+
+.incorrect
+  text-decoration: line-through
 
 @media(max-width: 600px)
   .inner
@@ -246,4 +267,4 @@
               flex: 0 0 100%
       &.form
         app-donation-form
-          width: 100%
+        width: 100%

@@ -11,6 +11,7 @@ export class DonationFormComponent implements OnInit, OnDestroy {
 
   form: FormGroup;
   amounts = [1600, 3200, 4800];
+  submitted: boolean = false;
 
   private subscription: Subscription;
 
@@ -54,7 +55,7 @@ export class DonationFormComponent implements OnInit, OnDestroy {
   }
 
   submit() {
-
+    this.submitted = true;
   }
 
   private amountValidator(): ValidatorFn {

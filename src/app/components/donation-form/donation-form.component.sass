@@ -87,6 +87,30 @@ form
     background-color: var(--white)
     border-radius: 5px
 
+.bank-info
+  padding: 1em
+  background-color: var(--white)
+  border-radius: 5px
+  .details-container
+    display: flex
+    justify-content: center
+    align-items: center
+    .bank-details
+      display: flex
+      flex-direction: column
+      margin-right: 2em
+    .transfer-icon
+      $image-size: 4em
+      background-repeat: no-repeat
+      background-size: cover
+      width: $image-size
+      height: $image-size
+      min-width: $image-size
+      background-image: url('/assets/images/transfer.svg')
+
+  .highlight
+    font-weight: 500
+
 @media(max-width: 600px)
 
   form
@@ -103,3 +127,9 @@ form
         margin-top: 1em
         font-size: 16.5px
         height: 2em
+  .bank-info
+    .details-container
+      flex-direction: column-reverse
+    .bank-details
+      margin-top: 2em
+      margin-right: 0

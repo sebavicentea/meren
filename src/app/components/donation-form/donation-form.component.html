@@ -1,4 +1,4 @@
-<form submit="send()" [formGroup]="form" (ngSubmit)="submit()">
+<form *ngIf="!submitted; else bankInfo" submit="send()" [formGroup]="form" (ngSubmit)="submit()">
   <div class="fields">
     <div class="field">
       <label for="name">Nombre</label>
@@ -38,3 +38,21 @@
     </div>
   </div>
 </form>
+
+<ng-template #bankInfo>
+  <div class="bank-info">
+    <h2>¿Y ahora?</h2>
+    <p>Te pedimos que nos hagas llegar tu donación a través de una transferencia a la cuenta bancaria que se encuentra debajo.</p>
+    <p><span class="highlight">Importante!</span> Que pongas en la descripción o motivo "Donación para el meren".</p>
+    <p>Y no te preocupes, si pusiste el pago en cuotas y te olvidas el próximo mes te mandaremos un mensajito para hacerte acordar.</p>
+    <div class="details-container">
+      <div class="bank-details">
+        <span><span class="highlight">Nombre:</span> Iglesia Pueblo Nuevo</span>
+        <span><span class="highlight">CBU:</span> 000000000000000000000</span>
+        <span><span class="highlight">Alias:</span> ni idea</span>
+        <span><span class="highlight">Banco:</span> tampoco</span>
+      </div>
+      <div class="transfer-icon"></div>
+    </div>
+  </div>
+</ng-template>
